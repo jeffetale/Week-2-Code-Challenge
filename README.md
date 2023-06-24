@@ -12,20 +12,19 @@ Ability to add a vote for an animal
 Requirements:
 
 ~Node.js
-~NPM
-~A text editor
+~A text editor e.g Visual Studio Code
+~Live Server
 
 Getting Started:
 
 Clone the repository to your local machine.
-~Install the dependencies by running npm install.
-~Start the local JSON server by running json-server --watch db.json.
 ~Open the project in your text editor.
-~Run the app by running 'npm start'.
+~Start the local JSON server by running json-server --watch db.json.
+~Run the app by starting the live server.
 
 Usage:
 
-The app will be running on http://localhost:3000. You can view a list of all the animals by clicking on the "Characters" tab. You can click on an animal's name to see its details and add a vote for that animal.
+The app will be running on http://localhost:3000. You can view a list of all the animals available. You can click on an animal's name to see its details and add a vote for that animal.
 
 Credits:
 
