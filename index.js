@@ -28,6 +28,13 @@ function displayAnimalDetails(animal) {
   animalImage.innerHTML = `<img src="${animal.image}" alt="${animal.name}">`;
   animalName.textContent = animal.name;
   votesCount.textContent = animal.votes;
+
+   // Vote counter
+   voteButton.addEventListener('click', () => {
+    animal.votes++;
+    votesCount.textContent = animal.votes;
+  });
+
 }
   
    
