@@ -18,6 +18,7 @@ fetch('http://localhost:3000/characters')
       listItem.textContent = animal.name;
       listItem.addEventListener('click', () => {
         displayAnimalDetails(animal);
+        updateSelectedAnimal(listItem);
       });
       animalList.appendChild(listItem);
     });
@@ -25,6 +26,9 @@ fetch('http://localhost:3000/characters')
     displayAnimalDetails(data[0]);
     // Set the current animal
     currentAnimal = data[0];
+    // Highlight the initial selected animal in the list
+    const initialSelectedAnimal = animalList.firstChild;
+    updateSelectedAnimal(initialSelectedAnimal);
   })
   .catch(error => console.error('Error fetching data:', error));
 
@@ -37,7 +41,16 @@ function displayAnimalDetails(animal) {
   // Set the current animal
   currentAnimal = animal;
 }
-
+// Function to update the selected animal in the list
+function updateSelectedAnimal(selectedAnimal) {
+  // Remove the 'active' class from all list items
+  const listItems = animalList.children;
+  for (let i = 0; i < listItems.length; i++) {
+    listItems[i].classList.remove('active');
+  }
+  // Add the 'active' class to the selected list item
+  selectedAnimal.classList.add('active');
+}
 // Vote button event listener
 voteButton.addEventListener('click', () => {
   currentAnimal.votes++;
