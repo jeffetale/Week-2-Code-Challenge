@@ -25,6 +25,9 @@
     font-size: 28px;
     margin-bottom: 10px;
   }
+  header p {
+    font-size: 14px;
+  }
   
   /* Main styles */
   main {
@@ -54,25 +57,38 @@
   }
   
   li {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    margin: 5px;
+    padding: 10px;
     cursor: pointer;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 1s ease;
   }
-  
+
+  .animal-list li:hover {
+    background-color: #e9e9e9;
+  }
+
+  .animal-list li.active {
+    background-color: #333;
+    color: #ffffff;
+  }
+
   /* Animal details styles */
   .animal-details {
     background-color: #fff;
     border-radius: 8px;
     padding: 100px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-  }
+   }
   
   .animal-details h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    text-align: center;
+    
   }
   
   .details-container {
@@ -95,6 +111,7 @@
     height: 100%;
     object-fit: contain;
     margin-top: 10px;
+    padding-bottom: 18px;
   }
   
   .animal-info {
@@ -117,10 +134,16 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 5px;
   }
   
   .vote-button:hover {
     background-color: #555;
+  }
+
+  .vote-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #333;
   }
   
   /* Footer styles */
@@ -130,4 +153,10 @@
     padding: 20px;
     text-align: center;
   }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  
   
