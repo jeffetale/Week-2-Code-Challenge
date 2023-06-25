@@ -19,7 +19,7 @@ Getting Started:
 
 Clone the repository to your local machine.
 ~Open the project in your text editor.
-~Start the local JSON server by running json-server --watch db.json.
+~Start the local JSON server by running "json-server --watch db.json"
 ~Run the app by starting the live server.
 
 Usage:
